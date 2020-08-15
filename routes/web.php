@@ -26,5 +26,11 @@ Route::get('login', 'userindexController@login')->name('userlogin');
 Route::post('login', 'userindexController@accesslogin');
 Route::get('logout', 'userindexController@logout')->name('userlogout');
 Route::resource('uploadproduct', 'userProductController')->middleware('checkuser');
+Route::get('signup', 'userindexController@signup')->name('signup');
+Route::post('signup', 'userindexController@register');
+Route::get('resetpassword','userindexController@resetpassword')->name('resetpassword');
+Route::post('resetpassword', 'userindexController@sendmail');
+Route::get('checkcode','userindexController@checkcode')->middleware('resetpassword')->name('reset-password');
+Route::post('checkcode', 'userindexController@setforgotpassword')->middleware('resetpassword');
 
 

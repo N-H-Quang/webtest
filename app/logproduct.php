@@ -5,9 +5,9 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 
-class product extends Model
+class logproduct extends Model
 {
-    protected $table='products';
+    protected $table='logproduct';
     protected $guarded =['id'];
     protected $fillable=['name','description','price','status_in_stock','quantity','status','userid'];
     protected $statu=[
@@ -24,8 +24,5 @@ class product extends Model
         {
             return Arr::get($this->statu,$this->status,' ');
         }
-        public function Users()
-        {
-return $this->belongsTo(User::class,"userid");
-        }
 }
+

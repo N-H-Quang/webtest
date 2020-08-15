@@ -3,6 +3,7 @@
 namespace Modules\Admin\Http\Controllers;
 
 use App\Http\Requests\StoreProductRequest;
+use App\logproduct;
 use App\product;
 use Illuminate\Contracts\Cache\Store;
 use Illuminate\Contracts\Support\Renderable;
@@ -43,6 +44,8 @@ class AdminProductController extends Controller
     public function destroy(Request $request,$id)
     {
         $product=product::findorfail($id);
+        $product2=$product->toArray();
+        logproduct::create($product2);
         $product->delete();
         $request->session()->flash('sucesss','xóa thành công');
         return redirect()->back();

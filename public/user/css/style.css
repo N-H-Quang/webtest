@@ -676,3 +676,78 @@ h1,h2,h3,h4,h5,h6
     background: #DDDDDD;
     color: #444;
 }
+#maincontent > .container > .row 
+{
+    display: flex;
+}
+@media only screen and (max-width: 600px) {
+    #header-main > div > form > .form-group
+    {
+       display: flex;
+    }
+    #menu-main > li 
+    {
+        display: none;
+    }
+    #menu-main :last-child
+    {
+        display: block;
+    }
+    .fixside 
+    {
+    width: 100%;
+    padding: 0px;
+    }
+    #menunav>div>nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    #menu-main>li>button
+    {
+        color: white;
+        font-weight: bold;
+        background-color: #d11618;
+        line-height: 40px;
+        text-transform: uppercase;
+        font-size: 12px;
+        margin: 0;
+        padding-top: 0%;
+        padding-bottom: 0%;
+    }
+    #menu-main>li>button>i
+    {
+        color: white;
+        font-weight: bold;
+        background-color: #d11618;
+        line-height: 40px;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+    #menu-main{
+        width: fit-content;
+
+    }
+   .navbar-nav
+   {
+    margin: auto;
+    margin-left: 21px;
+   }
+    .mr-auto>li
+   {
+    background-color: #444;
+   }
+   #ifofooter{
+    display: flex;
+}
+  }
+  @media only screen and (min-width: 600px) {
+    #menu-main >li> button
+    {
+        display: none;
+    } 
+    .navbar-nav
+    {
+        display: none;
+    }
+  
+}

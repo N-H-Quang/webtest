@@ -23,11 +23,13 @@
   <div class="d-flex" id="wrapper">
 
     <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="bg-light border-right" id="sidebar-wrapper" >
       <div class="sidebar-heading">ADMIN </div>
       <div class="list-group list-group-flush">
       <a href="{{route('tc')}}" class="list-group-item list-group-item-action bg-light">Dashboard</a>
       <a href="{{route('product.index')}}" class="list-group-item list-group-item-action bg-light">Product</a>
+      <a href="{{route('restoreindex')}}" class="list-group-item list-group-item-action bg-light">logproduct</a>
+      <a href="{{route('usercontroller.index')}}" class="list-group-item list-group-item-action bg-light">User</a>
       <a href="{{route('logout')}}" class="list-group-item list-group-item-action bg-light">Logout</a>
       </div>
     </div>
@@ -41,6 +43,11 @@
       @if (Session::has('sucesss'))
       <div class="pull-right alert alert-success" style=" display: inline-table;float: right;">
           <strong>Success!</strong> {{session('sucesss')}}
+        </div>
+      @endif
+      @if (Session::has('error'))
+      <div class="pull-right alert alert-danger" style=" display: inline-table;float: right;">
+          <strong>error!</strong> {{session('error')}}
         </div>
       @endif
       <div class="container-fluid">
@@ -73,6 +80,13 @@
  nav>button
  {
      float: right;
+ }
+ @media only screen and (max-width: 600px) {
+   #sidebar-wrapper
+   {
+     position: absolute;
+     z-index: 1;
+   }
  }
 </style>
 </html>

@@ -90,16 +90,10 @@
             @endif
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3" id="nav">
-                        <div class="bg-light border-right" id="sidebar-wrapper">
-                            <div class="list-group list-group-flush">
-                            <a href="{{route('uploadproduct.index')}}" class="list-group-item list-group-item-action bg-light">Product</a>
-                            <a href="{{route('userlogout')}}" class="list-group-item list-group-item-action bg-light">Logout</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-9 ">
+                   
                         @yield('content')
+                </div>
+                   
         </main>
     </div>
     </div>

@@ -51,6 +51,9 @@
 						<button class="login100-form-btn">
 							Login
 						</button>
+						<a href="{{route('resetpassword')}}" class="login100-form-btn">
+							Quên mật khẩu
+						</a>
 					</div>
 
 				</form>
